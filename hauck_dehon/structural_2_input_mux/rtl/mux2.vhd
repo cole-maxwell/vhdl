@@ -15,31 +15,31 @@ port (
 end;
 
 -- Define the overall structure of the mux.
-architecture struct of mux2 is
+architecture struct of mux2
 
-    -- Define the internal gates.
-    component notgate is
-    port (
-        a : in std_logic;
-        b : out std_logic
-    );
-    end component;
+-- Define the internal gates.
+component notgate is
+port (
+    a : in std_logic;
+    b : out std_logic
+);
+end component;
 
-    component andgate is
-    port (
-        a : in std_logic;
-        b : in std_logic;
-        y : out std_logic   
-    );
-    end component;
+component andgate is
+port (
+    a : in std_logic;
+    b : in std_logic;
+    y : out std_logic   
+);
+end component;
 
-    component orgate is
-    port (
-        a : in std_logic;
-        b : in std_logic;
-        y : out std_logic;
-    );
-    end component;
+component orgate is
+port (
+    a : in std_logic;
+    b : in std_logic;
+    y : out std_logic;
+);
+end component;
 
 -- Define internal signals/wires that connect components.
 signal sel_inv : std_logic;
@@ -49,14 +49,14 @@ signal sel_b : std_logic;
 -- "begin" signifies the start of the structural code
 begin
 
-    -- instantiate the inverter
+    -- instantiate the NOT gate (inverter)
     inverter_inst_0 : notgate
     port map (
         a => sel,
         b => sel_inv
     );
 
-    -- instantiate both and gates
+    -- instantiate both AND gates
     and_inst_0 : andgate
     port map (
         a => a,
@@ -71,7 +71,7 @@ begin
         y => sel_b
     )
 
-    -- instantiate or gate
+    -- instantiate OR gate
     or_inst_0 : orgate
     port map (
         a => sel_a,
@@ -79,6 +79,6 @@ begin
         y => y
     );
 
-    end;
+end;
 
 

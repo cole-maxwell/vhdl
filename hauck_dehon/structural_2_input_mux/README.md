@@ -5,7 +5,7 @@ Date:   6/19/2021
 
 Description-------------
 
-VHDL Structural description of a 2-input multiplexer.
+Structural description of a 2-input multiplexer.
 
 VHDL example code from Listing 6.1 from the textbook
 'Reconfigurable Computing' by Hauck and Dehon.

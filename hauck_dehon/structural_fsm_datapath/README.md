@@ -1,13 +1,13 @@
-# multibit_4_input_mux
+# structural_fsm_datapath
 
 Author: Cole Maxwell
 Date:   6/25/2021
 
 Description-------------
 
-Multibit 4-input mux using parametric hardware generation. The width of the mux is defined by a generic, DATA_WIDTH, which sets the range of the vectors in the interface and is later used as the termination value in the generate loop.
+A time-shared datapath that computes Ax^2 + Bx + X using only one multiplier and one adder. The design is naturally separated into state machine controller and datapath components. The control signals are connected from the controller to the datapath in the structural code.
 
-VHDL example code from Listing 6.3 from the textbook
+VHDL example code from Listing 6.4 from the textbook
 'Reconfigurable Computing' by Hauck and Dehon.
 
 Usage-------------------

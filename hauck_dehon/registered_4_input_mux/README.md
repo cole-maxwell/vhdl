@@ -1,13 +1,13 @@
-# structural_2_input_mux
+# registered_4_input_mux
 
 Author: Cole Maxwell
-Date:   6/19/2021
+Date:   6/24/2021
 
 Description-------------
 
-VHDL Structural description of a 2-input multiplexer.
+RTL desciption of a 4-input mux with registered outputs.
 
-VHDL example code from Listing 6.1 from the textbook
+VHDL example code from Listing 6.2 from the textbook
 'Reconfigurable Computing' by Hauck and Dehon.
 
 Usage-------------------

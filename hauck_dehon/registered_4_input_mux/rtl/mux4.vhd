@@ -17,13 +17,13 @@ end;
 
 architecture rtl of mux4 is
 
-signal e_c : std_logic;
+signal y_c : std_logic;
 
 -- RTL code starts here
 begin
 
 -- concurrent signal assignment
-e_c <=  a when sel="00" else
+y_c <=  a when sel="00" else
         b when sel="01" else
         c when sel="10" else
         d;
@@ -34,10 +34,10 @@ begin
 
 -- acion under reset
 if (reset ='1') then
-    e <= '0';
+    y <= '0';
 -- action under rising clock edge
 elsif (clk' EVENT and clk='1') then
-    e <= e_c;
+    y <= y_c;
 end if;
 
 end process;
